@@ -11,13 +11,13 @@ import java.util.Date;
 public class ExtentReportNG {
 
     static ExtentReports extent;
-
+    public static String reportPath;
     public static ExtentReports setupExtentReport() throws Exception {
         SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyy HH-mm-ss");
         java.util.Date date = new Date();
         String actualDate = format.format(date);
 
-        String reportPath = System.getProperty("user.dir")+
+        reportPath = System.getProperty("user.dir")+
                 "/Reports/ExecutionReport_"+actualDate+".html";
 
         ExtentSparkReporter sparkReport = new ExtentSparkReporter(reportPath);

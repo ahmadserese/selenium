@@ -86,5 +86,15 @@ public class ListenersImplementation implements ITestListener {
     @Override
     public void onFinish(ITestContext context) {
         report.flush();
+
+        String reportsDir = System.getProperty("user.dir") + "/Reports/";
+        File sourceFile = new File(reportsDir + ExtentReportNG.reportPath);
+        File destinationFile = new File(reportsDir + "ExecutionReport.html");
+
+        try {
+            FileUtils.copyFile(sourceFile, destinationFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
