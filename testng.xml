@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo" parallel="methods" thread-count="3">
+    <listeners>
+        <listener class-name="components.ListenersImplementation" />
+    </listeners>
+    <test name="Test">
+        <classes>
+            <class name="testCases.LoginTest" />
+        </classes>
+    </test>
+</suite>
