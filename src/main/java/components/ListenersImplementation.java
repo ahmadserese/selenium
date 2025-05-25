@@ -88,7 +88,7 @@ public class ListenersImplementation implements ITestListener {
         report.flush();
 
         String reportsDir = System.getProperty("user.dir") + "/Reports/";
-        File sourceFile = new File(reportsDir + ExtentReportNG.reportPath);
+        File sourceFile = new File(ExtentReportNG.reportPath);
         File destinationFile = new File(reportsDir + "ExecutionReport.html");
 
         try {
